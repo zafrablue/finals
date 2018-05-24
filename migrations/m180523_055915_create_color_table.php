@@ -3,17 +3,18 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `Tshirt`.
+ * Handles the creation of table `color`.
  */
-class m180523_034544_create_Tshirt_table extends Migration
+class m180523_055915_create_color_table extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('Tshirt', [
+        $this->createTable('color', [
             'id' => $this->primaryKey(),
+            'color' => $this->string(200)->notNull(),
         ]);
     }
 
@@ -22,6 +23,6 @@ class m180523_034544_create_Tshirt_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('Tshirt');
+        $this->dropTable('color');
     }
 }
